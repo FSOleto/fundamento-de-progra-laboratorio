@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+int main()
+{
+char nombre[50];
+int edad;
+char carrera[50];
+int semestre;
+
+printf("ingrese el nombre completo: ");
+scanf("%s",&nombre);
+
+printf("ingrese edad: ");
+scanf("%d",&edad);
+
+printf("ingrese carrera: ");
+scanf("%s",&carrera);
+
+printf("ingrese semestre: ");
+scanf("%d",&semestre);
+
+printf("----DATOS DEL ESTUDIANTE---\n");
+printf("NOMBRE: %s\n",nombre);
+printf("EDAD: %d\n",edad);
+printf("CARRERA: %s\n",carrera);
+printf("SEMESTRE: %d\n",semestre);
+    return 0;
+}
