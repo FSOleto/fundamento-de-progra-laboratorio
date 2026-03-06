@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+ char cliente[50];
+ int cantidad;
+ float precio,total;
+ 
+ printf("ingrese nombre del cliente: ");
+ scanf("%s",&cliente);
+ 
+ printf("ingrese precio del producto: ");
+ scanf("%f",&precio);
+ 
+ printf("ingrese cantidad de productos comprados: ");
+ scanf("%d",&cantidad);
+ 
+ total=precio*cantidad;
+ 
+ printf("\n----RESUMEN DE COMPRA----");
+ printf("CLIENTE: %s",cliente);
+ printf("CANTIDAD DE PRODUCTOS: %d\n",cantidad);
+ printf("TOTAL A PAGAR: %.2f\n",total);
+ 
+
+    return 0;
+}
