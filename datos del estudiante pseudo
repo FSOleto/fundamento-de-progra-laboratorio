@@ -1,0 +1,26 @@
+Algoritmo DatosDelEstudiante
+	Definir nombre como cadena
+	definir edad Como Entero
+	definir carrera como cadena
+	definir semestre Como Entero
+	
+	escribir "ingresar nombre: "
+	Leer nombre
+	
+	Escribir "ingresar edad: "
+	leer edad
+	
+	escribir "ingresar carrera: "
+	leer carrera
+	
+	escribir "ingresar semestre: "
+	leer semestre
+	
+	Escribir"----datos del estudiante----"
+	escribir "nombre: ",nombre
+	Escribir "edad: ",edad
+	Escribir "carrera: ",carrera
+	escribir "semestre: ",semestre
+	
+	
+FinAlgoritmo
