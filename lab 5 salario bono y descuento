@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+
+    char nombre[100];
+    int antiguedad;
+    float sueldo_basico;
+    float bono = 0;
+    float total_ganado;
+    float descuento_afp;
+    float impuesto = 0;
+    float salario_neto;
+
+    printf("Ingrese el nombre del trabajador: ");
+    fgets(nombre, sizeof(nombre), stdin);
+
+    printf("Ingrese los anios de antiguedad: ");
+    scanf("%d", &antiguedad);
+
+    printf("Ingrese el sueldo basico: ");
+    scanf("%f", &sueldo_basico);
+
+
+    if (antiguedad > 5) {
+        bono = sueldo_basico * 0.10;
+    }
+
+    total_ganado = sueldo_basico + bono;
+
+
+    descuento_afp = total_ganado * 0.1271;
+
+
+    if (total_ganado > 9500) {
+        impuesto = (total_ganado - 9500) * 0.13;
+    }
+
+    salario_neto = total_ganado - descuento_afp - impuesto;
+
+    printf("\n----- RESUMEN SALARIAL -----\n");
+    printf("Trabajador: %s", nombre);
+    printf("Sueldo Basico: %.2f Bs\n", sueldo_basico);
+    printf("Bono Antiguedad: %.2f Bs\n", bono);
+    printf("Total Ganado: %.2f Bs\n", total_ganado);
+    printf("Descuento AFP: %.2f Bs\n", descuento_afp);
+    printf("Impuesto RC-IVA: %.2f Bs\n", impuesto);
+    printf("Salario Neto: %.2f Bs\n", salario_neto);
+
+    return 0;
+}
