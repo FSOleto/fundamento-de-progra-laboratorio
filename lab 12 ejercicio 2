@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+// Prototipos de funciones
+float calcularSubtotal(int cantidad);
+float aplicarDescuento(float subtotal);
+void mostrarResultado(float total);
+
+int main()
+{
+    float subtotal, total;
+    int cantidad;
+
+    cout << "Cantidad de productos: ";
+    cin >> cantidad;
+
+    // Calcular subtotal
+    subtotal = calcularSubtotal(cantidad);
+
+    // Aplicar descuento
+    total = aplicarDescuento(subtotal);
+
+    // Mostrar resultado final
+    mostrarResultado(total);
+
+    return 0;
+}
+
+// Función para calcular subtotal
+float calcularSubtotal(int cantidad)
+{
+    float subtotal;
+
+    subtotal = cantidad * 25;
+
+    return subtotal;
+}
+
+// Función para aplicar descuento
+float aplicarDescuento(float subtotal)
+{
+    if(subtotal > 100)
+    {
+        subtotal = subtotal - (subtotal * 0.10);
+    }
+
+    return subtotal;
+}
+
+// Función para mostrar resultado
+void mostrarResultado(float total)
+{
+    cout << "El total final es: " << total << endl;
+}
+
+
+| Nº | Tipo de Error           | Respuesta                                                                                                                                                                                         |
+| -- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1  | Funciones no declaradas | El compilador no reconoce las funciones porque se están usando en `main()` antes de haber sido declaradas o definidas.                                                                            |
+| 2  | Orden incorrecto        | Las funciones deberían declararse antes de `main()` usando prototipos, por ejemplo: `float calcularSubtotal(int cantidad);`                                                                       |
+| 3  | Flujo del programa      | El orden lógico correcto es: ingresar datos → calcular subtotal → aplicar descuento → mostrar resultado.                                                                                          |
+| 4  | Organización            | Para mejorar la legibilidad se recomienda: colocar prototipos al inicio, usar nombres claros de funciones y variables, separar funciones por responsabilidad y mantener una indentación ordenada. |
