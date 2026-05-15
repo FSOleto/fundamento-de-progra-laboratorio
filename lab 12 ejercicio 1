@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+
+float calcularPromedio(float n1, float n2, float n3);
+void mostrarResultado(float promedio);
+
+int main()
+{
+    float nota1, nota2, nota3;
+    float promedio;
+
+    cout << "Ingrese nota 1: ";
+    cin >> nota1;
+
+    cout << "Ingrese nota 2: ";
+    cin >> nota2;
+
+    cout << "Ingrese nota 3: ";
+    cin >> nota3;
+
+  
+    promedio = calcularPromedio(nota1, nota2, nota3);
+
+    mostrarResultado(promedio);
+
+    return 0;
+}
+
+float calcularPromedio(float n1, float n2, float n3)
+{
+    float promedio;
+
+   
+    promedio = (n1 + n2 + n3) / 3;
+
+    cout << "Promedio calculado: " << promedio << endl;
+
+ 
+    return promedio;
+}
+
+void mostrarResultado(float promedio)
+{
+   
+    if(promedio >= 51)
+    {
+        cout << "APROBADO" << endl;
+    }
+    else
+    {
+        cout << "REPROBADO" << endl;
+    }
+}
+
+
+
+
+| Nº | Tipo de Error       | Respuesta                                                                                                                                                                                          |
+| -- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1  | Error de retorno    | No. La función `calcularPromedio()` está declarada como `float`, pero no devuelve ningún valor porque falta `return promedio;`.                                                                    |
+| 2  | Variable incorrecta | No. En `main()` la variable `promedio` nunca recibe el valor calculado. Solo se llama la función, pero no se guarda el resultado. Debería ser: `promedio = calcularPromedio(nota1, nota2, nota3);` |
+| 3  | Error matemático    | No. La fórmula está incorrecta por prioridad de operadores. Actualmente hace `n1 + n2 + (n3 / 3)`. Debe ser:  \frac{n1+n2+n3}{3}                                                                   |
+| 4  | Error lógico        | Siempre muestra `APROBADO` porque hay un punto y coma `;` después del `if(promedio >= 51);`. Eso termina el `if` y el bloque se ejecuta siempre.                                                   |
+| 5  | Tipo de dato        | No es lo más correcto usar `int promedio` en `main()`, porque el promedio puede tener decimales. Debería ser `float promedio;`.                                                                    |
